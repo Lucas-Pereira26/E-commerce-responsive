@@ -1,0 +1,32 @@
+
+
+
+
+
+.avatar-user{
+    width: 80px;
+}
+.profile-background{
+    background-color:#F4F5F3;
+   border-radius: 15px;
+}
+.profile-margin{
+margin-top: 2rem;
+margin-bottom: 2rem;
+}
+.image-responsive{
+max-width: 30%;
+}
+@media screen and (max-width: 520px) {
+    .h-18 {
+        height: 10rem;
+        width: 10rem;
+    }
+}
+
+@media screen and (max-width: 407px) {
+    .h-18 {
+        height: 7rem;
+        width: 7rem;
+    }
+}
