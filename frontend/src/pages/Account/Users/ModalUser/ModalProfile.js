@@ -2,25 +2,24 @@ import React, { useRef } from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { Cross2Icon } from '@radix-ui/react-icons';
 import UserFormModal from './FormModal';
-import { useNavigate } from 'react-router-dom';
-import UserProfile from "../../UserProfile";
-import ProfileSection from '../Profile';
 
 
-const DialogDemo = ({ userData }) => {
+
+
+const DialogDemo = ({ userData, onProfileUpdate }) => {
     const userFormModalRef = useRef();
-   const navigate = useNavigate()
+    
 
-   const handleComponent = () => {
-    return <ProfileSection userData={userData} />
-};
+ 
     const handleSaveProfile = async () => {
         
         if (userFormModalRef.current) {
             await userFormModalRef.current.handleUpdate(); 
-      
-            handleComponent()
-            console.log('user test',handleComponent())
+            if (onProfileUpdate) {
+                onProfileUpdate();
+            }
+           
+           
         }
     };
 

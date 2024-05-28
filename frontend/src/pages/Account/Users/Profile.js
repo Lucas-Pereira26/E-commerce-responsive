@@ -1,18 +1,13 @@
 import React from 'react';
 import './Profile.css';
 import "react-toastify/dist/ReactToastify.css";
-
-import DialogDemo from './ModalUser/EditProfile';
+import DialogDemo from './ModalUser/ModalProfile';
 import { AvatarIcon } from '@radix-ui/react-icons';
 
-
-const ProfileSection = ({ userData }) => {
-
-
+const ProfileSection = ({userData, Updateprofile}) => {
+ 
     return (
         <div className="bg-white py-12 sm:py-12 ">
-
-
             <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8  profile-background">
                 {/* <div className="flex items-center justify-center rounded-full"></div> */}
 
@@ -67,7 +62,7 @@ const ProfileSection = ({ userData }) => {
 
                                     <div className="mt-10">
 
-                                        <DialogDemo userData={userData} />
+                                        <DialogDemo onProfileUpdate={Updateprofile} userData={userData} />
                                     </div>
                                 </dl>
                             </div>

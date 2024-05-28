@@ -30,4 +30,6 @@ export const store = configureStore({
     }),
 });
 
+// export const updateStore = configureStore()
+
 export let persistor = persistStore(store);

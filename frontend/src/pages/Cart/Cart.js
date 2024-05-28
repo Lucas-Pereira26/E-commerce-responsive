@@ -31,6 +31,8 @@ const Cart = () => {
     });
     setTotalAmt(price);
   }, [products]);
+
+  
   useEffect(() => {
     if (totalAmt <= 200) {
       setShippingCharge(30);
@@ -41,7 +43,7 @@ const Cart = () => {
     }
   }, [totalAmt]);
 
-
+ 
 
   const handleProceedToCheckout = async () => {
     try {
