@@ -11,7 +11,7 @@ const UserFormModal = forwardRef(({ userData }, ref) => {
     const [showPassword, setShowPassword] = useState(false);
     const [name, setName] = useState(userData.name);
     const [email, setEmail] = useState(userData.email);
-    const [password, setPassword] = useState('');
+    const [password, setPassword] = useState(userData.password_user);
     const userId = userData.sys_id;
   
     const togglePasswordVisibility = () => {
@@ -88,7 +88,7 @@ const UserFormModal = forwardRef(({ userData }, ref) => {
           className="text-violet11 shadow-violet7 focus:shadow-violet8 inline-flex h-[35px] w-full flex-1 items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none shadow-[0_0_0_1px] outline-none focus:shadow-[0_0_0_2px]"
           id="name"
           type="text"
-          defaultValue={userData.name}
+          
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
@@ -102,7 +102,7 @@ const UserFormModal = forwardRef(({ userData }, ref) => {
           className="text-violet11 shadow-violet7 focus:shadow-violet8 inline-flex h-[35px] w-full flex-1 items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none shadow-[0_0_0_1px] outline-none focus:shadow-[0_0_0_2px]"
           id="email"
           type="email"
-          defaultValue={userData.email}
+          
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
@@ -115,9 +115,8 @@ const UserFormModal = forwardRef(({ userData }, ref) => {
         <div className="relative  ">
           <input
             className="text-violet11 shadow-violet7 focus:shadow-violet8 inline-flex h-[35px] w-full flex-1 items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none shadow-[0_0_0_1px] outline-none focus:shadow-[0_0_0_2px]"
-            id="userpassword"
+            id="password"
             type={showPassword ? 'text' : 'password'}
-            defaultValue={userData.password_user}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />

@@ -57,7 +57,7 @@ const Cart = () => {
   }));
 console.log('ticke front: ', ticketDataArray)
     // Envie os dados calculados para a API
-    const response = await Api.post("/ticks", ticketDataArray, {
+    const response = await Api.post("/ticket", ticketDataArray, {
       headers: {
         'Content-Type': 'application/json',
       },

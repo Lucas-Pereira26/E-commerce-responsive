@@ -8,17 +8,13 @@ import UserFormModal from './FormModal';
 
 const DialogDemo = ({ userData, onProfileUpdate }) => {
     const userFormModalRef = useRef();
-    
 
- 
     const handleSaveProfile = async () => {
-        
         if (userFormModalRef.current) {
             await userFormModalRef.current.handleUpdate(); 
             if (onProfileUpdate) {
                 onProfileUpdate();
             }
-           
            
         }
     };
@@ -41,7 +37,6 @@ const DialogDemo = ({ userData, onProfileUpdate }) => {
                         Make changes to your profile here. Click save when you're done.
                     </Dialog.Description>
 
-                    {/* Passa userData diretamente para UserFormModal */}
                     <UserFormModal ref={userFormModalRef} userData={userData} />
 
                     <div className="mt-[25px] flex justify-end">
