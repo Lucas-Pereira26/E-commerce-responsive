@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaFacebook, FaYoutube, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import FooterListTitle from "./FooterListTitle";
 import { paymentCard } from "../../../assets/images";
 import Image from "../../designLayouts/Image";
@@ -39,34 +39,34 @@ const Footer = () => {
             </p>
             <ul className="flex items-center gap-2">
               <a
-                href="https://www.youtube.com/@reactjsBD"
+                href="https://api.whatsapp.com/send/?phone=%2B5598991903957&text&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noreferrer"
               >
                 <li className="w-7 h-7 bg-primeColor text-gray-100 hover:text-white cursor-pointer text-lg rounded-full flex justify-center items-center hover:bg-black duration-300">
-                  <FaYoutube />
+                  <FaWhatsapp />
                 </li>
               </a>
               <a
-                href="https://github.com/noorjsdivs"
+                href="https://www.instagram.com/lucaspereiira_oficial/?igshid=ZDdkNTZiNTM%3D"
                 target="_blank"
                 rel="noreferrer"
               >
                 <li className="w-7 h-7 bg-primeColor text-gray-100 hover:text-white cursor-pointer text-lg rounded-full flex justify-center items-center hover:bg-black duration-300">
-                  <FaGithub />
+                  <FaInstagram />
                 </li>
               </a>
               <a
-                href="https://www.facebook.com/Noorlalu143/"
+                href="https://github.com/Lucas-Pereira26"
                 target="_blank"
                 rel="noreferrer"
               >
                 <li className="w-7 h-7 bg-primeColor text-gray-100 hover:text-white cursor-pointer text-lg rounded-full flex justify-center items-center hover:bg-black duration-300">
-                  <FaFacebook />
+                  <FaGithub/>
                 </li>
               </a>
               <a
-                href="https://www.linkedin.com/in/noor-mohammad-ab2245193/"
+                href="https://www.linkedin.com/in/lucas-pereira-877a05252/"
                 target="_blank"
                 rel="noreferrer"
               >
