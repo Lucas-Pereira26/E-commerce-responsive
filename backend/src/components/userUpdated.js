@@ -1,5 +1,4 @@
 import axios from 'axios';
-import generateCredentials from './Credentials';
 
 export const updatedUser = async (req, res) => {
     const username = 'user.integration';
