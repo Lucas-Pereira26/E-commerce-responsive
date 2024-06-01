@@ -1,10 +1,16 @@
 import axios from 'axios';
-import btoa from 'btoa';
+import generateCredentials from './Credentials';
 
 export const updatedUser = async (req, res) => {
+    const username = 'user.integration';
+    const password = 'Dev.#@2024';
+    const credentials = `${username}:${password}`;
+    const encodedCredentials = btoa(credentials);
     try {
         const { userId, name, email, password, imageBase64 } = req.body;
         console.log(req.body)
+
+        
         const updateUserResponse = await axios.put(
             `https://dev57586.service-now.com/api/now/table/x_820501_departa_0_users/${userId}`,
             {
@@ -16,7 +22,7 @@ export const updatedUser = async (req, res) => {
             {
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': 'Basic ' + btoa('admin' + ':' + '@Black2309'),
+                    'Authorization': `Basic ${encodedCredentials}`,
                 },
             }
         );

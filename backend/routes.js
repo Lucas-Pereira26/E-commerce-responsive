@@ -3,6 +3,7 @@ import { createUser } from './src/components/userCreated.js';
 import { updatedUser } from './src/components/userUpdated.js';
 import { getUser } from './src/components/userGet.js';
 import { userLogin } from './src/components/userLogin.js';
+import { createdTickets } from './src/components/ticketCreated.js';
 
 const router = express.Router();
 

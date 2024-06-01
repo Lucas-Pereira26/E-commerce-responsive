@@ -1,6 +1,10 @@
 import axios from "axios";
 import btoa from "btoa";
 export const getUser = async (req, res) => {
+    const username = 'user.integration';
+    const password = 'Dev.#@2024';
+    const credentials = `${username}:${password}`;
+    const encodedCredentials = btoa(credentials);
     try {
         const userId = req.query.userId;
         console.log("teste user Id:", userId);
@@ -10,7 +14,7 @@ export const getUser = async (req, res) => {
             {
                 headers: {
                     "Content-Type": "application/json",
-                    Authorization: "Basic " + btoa("admin" + ":" + "@Black2309"),
+                    'Authorization': `Basic ${encodedCredentials}`,
                 },
             }
         );
